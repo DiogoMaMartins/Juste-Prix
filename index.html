@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juste Prix</title>
+	<link href="style.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript">
+var attempts = 0;
+var valeurMin = 20;
+var valeurMax=80;
+
+function  random(){
+			return Math.floor(Math.random() * (valeurMax - valeurMin + 1) + valeurMin);
+        		}
+ var numR = random();
+function game(){
+if (num >20 && num <80) {
+			while (num!= numR) {	
+				if (num < numR) {
+				alert("cest plus");
+				attempts +=1;	
+				}
+				else if (num > numR) {				
+				alert("cest moins");
+				attempts +=1;
+				}
+				var num= prompt("Entrez un nombre entre 20 et 80:");
+			}
+				if (num == numR) {
+				alert("C'est gagne tu as trouve en " + attempts*2 + " coups!");
+				}
+				else {
+				var num= prompt("Entrez un nombre entre 20 et 80:");	
+				}
+			
+		}
+		else {
+			alert("Entrez un nombre entre 20 et 80:");
+		}
+	}
+
+play();
+var teste = play();
+alert(teste);
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
